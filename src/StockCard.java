@@ -26,34 +26,34 @@ public class StockCard extends Card {
     }
     public String getTagString() {
         switch (this.tag){
-            case Perfume -> {
+            case PERFUME -> {
                 return "Perfume";
             }
-            case Cars -> {
+            case CARS -> {
                 return "Cars";
             }
-            case Clothes -> {
+            case CLOTHES -> {
                 return "Clothes";
             }
-            case Media -> {
+            case MEDIA -> {
                 return "Media";
             }
-            case Games -> {
+            case GAMES -> {
                 return "Games";
             }
-            case Drinks -> {
+            case DRINKS -> {
                 return "Drinks";
             }
-            case Aviation -> {
+            case AVIATION -> {
                 return "Aviation";
             }
-            case Food -> {
+            case FOOD -> {
                 return "Food";
             }
-            case Hotels -> {
+            case HOTELS -> {
                 return "Hotels";
             }
-            case Phones -> {
+            case PHONES -> {
                 return "Phones";
             }
             default -> {
@@ -65,6 +65,11 @@ public class StockCard extends Card {
     @Override
     public void action() {
         super.action();
+
+    }
+
+    @Override
+    public void action(Player player) {
 
     }
 

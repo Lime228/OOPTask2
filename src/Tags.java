@@ -1,12 +1,12 @@
 public enum Tags {
-    Perfume,
-    Cars,
-    Clothes,
-    Media,
-    Games,
-    Drinks,
-    Aviation,
-    Food,
-    Hotels,
-    Phones
+    PERFUME,
+    CARS,
+    CLOTHES,
+    MEDIA,
+    GAMES,
+    DRINKS,
+    AVIATION,
+    FOOD,
+    HOTELS,
+    PHONES
 }
