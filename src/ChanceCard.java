@@ -3,7 +3,6 @@ public class ChanceCard extends Card{
     ChanceCard(){
 
     }
-    int g_CardTypeToMoney[] = {10, 1500, 500};
 
     @Override
     public void action(Player player) {
@@ -14,9 +13,9 @@ public class ChanceCard extends Card{
         }else {
             player.increaseCoordinate(type.getValue());
         }
-
+        print(type);
     }
-
-
-
+    private void print(ChanceType type){
+        System.out.println(type.getDescription());
+    }
 }
