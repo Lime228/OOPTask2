@@ -1,6 +1,6 @@
 
-public class ChanceCard extends Card{
-    ChanceCard(){
+public class ChanceCard extends Card {
+    ChanceCard() {
 
     }
 
@@ -8,14 +8,15 @@ public class ChanceCard extends Card{
     public void action(Player player) {
         super.action();
         ChanceType type = ChanceType.getRandomType();
-        if(type.isMoney()){
+        if (type.isMoney()) {
             player.addMoney(type.getValue());
-        }else {
+        } else {
             player.increaseCoordinate(type.getValue());
         }
         print(type);
     }
-    private void print(ChanceType type){
+
+    private void print(ChanceType type) {
         System.out.println(type.getDescription());
     }
 }
