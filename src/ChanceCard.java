@@ -11,7 +11,7 @@ public class ChanceCard extends Card {
         if (type.isMoney()) {
             player.addMoney(type.getValue());
         } else {
-            player.increaseCoordinate(type.getValue());
+            player.setCoordinate(type.getValue());
         }
         print(type);
     }

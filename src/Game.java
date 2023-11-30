@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Game {
     Game(Player[] players) {
-        if(players.length > 4){
+        if (players.length > 4) {
             System.out.println("Слишком много игроков!");
             System.exit(0);
-        }else if (players.length >=2) {
+        } else if (players.length >= 2) {
             Game.players = players;
-        }else {
+        } else {
             System.out.println("Слишком мало игроков!");
             System.exit(0);
         }
@@ -49,7 +49,7 @@ public class Game {
         field[25] = new StockCard("Toyota", Tags.CARS, 1760);
         field[26] = new StockCard("Freddy Fazbear's Pizza", Tags.FOOD, 1987);
         field[27] = new StockCard("Shaurma", Tags.FOOD, 1910);
-        field[28] = new StockCard("Lesta Games", Tags.MEDIA, 2400);
+        field[28] = new StockCard("Lesta Games", Tags.GAMES, 2400);
         field[29] = new StockCard("Old man Khinkalych", Tags.FOOD, 2300);
         //police
         field[31] = new StockCard("Maquis", Tags.HOTELS, 1200);
@@ -72,11 +72,17 @@ public class Game {
                         System.out.println("Чего желаете?");
                         System.out.println("1. Бросить кубики.");
                         System.out.println("2. Посмотреться в зеркало.");
+                        System.out.println("3. Продать здание.");
                         System.out.println("_________________________");
                         choise = scanner.nextInt();
                         switch (choise) {
                             case 1 -> stepPlayer(player);
                             case 2 -> player.status();
+                            case 3 -> {
+                                if (player.getBought().size() != 0) {
+                                    player.letsGoSell();
+                                }
+                            }
                         }
                     } catch (Exception e) {
                         System.out.println("Введите число 1 или 2");

@@ -1,9 +1,10 @@
 public abstract class Card {
 
-    Card(){
+    Card() {
 
     }
-    public void action(){
+
+    public void action() {
 
     }
 

@@ -41,114 +41,117 @@ public class StockCard extends Card {
                         player.addMoney(-cost);
                         player.addBought(this);
                     }
-                } catch (Exception e){
+                } catch (Exception e) {
                     System.out.println("Введите число 1 или 2");
                 }
             }
         } else if (!player.cardChecker(this) && Game.isBought(this)) {
             while (!paymentCheck(player)) {
             }
-        } else { // TODO: 29.11.2023 прикрутить проверку на наличие всей недвижимости из категории
-            if (chips_count < 5) {
-                if (chips_count == 0) {
-                    if (player.getMoney() >= chips_costs[0]) {
-                        try {
-                            System.out.println("Желаете поставить фишку?");
-                            System.out.println("1. Да");
-                            System.out.println("2. Нет");
-                            choise = scanner.nextInt();
-                            if (choise == 1) {
-                                player.addMoney(-chips_costs[0]);
-                                cost *= 0.5;
-                                cost += chips_costs[0] * 0.75;
-                                chips_count++;
+        } else {
+            if (this.getTag().getValue() == player.tagChecker(this.getTag())) {
+                if (chips_count < 5) {
+                    if (chips_count == 0) {
+                        if (player.getMoney() >= chips_costs[0]) {
+                            try {
+                                System.out.println("Желаете поставить фишку?");
+                                System.out.println("1. Да");
+                                System.out.println("2. Нет");
+                                choise = scanner.nextInt();
+                                if (choise == 1) {
+                                    player.addMoney(-chips_costs[0]);
+                                    cost *= 0.5;
+                                    cost += chips_costs[0] * 0.75;
+                                    chips_count++;
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Введите число 1 или 2");
                             }
-                        } catch (Exception e) {
-                            System.out.println("Введите число 1 или 2");
                         }
                     }
-                }
-                if (chips_count == 1) {
-                    if (player.getMoney() >= chips_costs[1]) {
-                        try {
-                            System.out.println("Желаете поставить фишку?");
-                            System.out.println("1. Да");
-                            System.out.println("2. Нет");
-                            choise = scanner.nextInt();
-                            if (choise == 1) {
-                                player.addMoney(-chips_costs[1]);
-                                cost += chips_costs[1] * 0.75;
-                                chips_count++;
+                    if (chips_count == 1) {
+                        if (player.getMoney() >= chips_costs[1]) {
+                            try {
+                                System.out.println("Желаете поставить фишку?");
+                                System.out.println("1. Да");
+                                System.out.println("2. Нет");
+                                choise = scanner.nextInt();
+                                if (choise == 1) {
+                                    player.addMoney(-chips_costs[1]);
+                                    cost += chips_costs[1] * 0.75;
+                                    chips_count++;
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Введите число 1 или 2");
                             }
-                        } catch (Exception e) {
-                            System.out.println("Введите число 1 или 2");
                         }
                     }
-                }
-                if (chips_count == 2) {
-                    if (player.getMoney() >= chips_costs[2]) {
-                        try {
-                            System.out.println("Желаете поставить фишку?");
-                            System.out.println("1. Да");
-                            System.out.println("2. Нет");
-                            choise = scanner.nextInt();
-                            if (choise == 1) {
-                                player.addMoney(-chips_costs[2]);
-                                cost += chips_costs[2] * 0.75;
-                                chips_count++;
+                    if (chips_count == 2) {
+                        if (player.getMoney() >= chips_costs[2]) {
+                            try {
+                                System.out.println("Желаете поставить фишку?");
+                                System.out.println("1. Да");
+                                System.out.println("2. Нет");
+                                choise = scanner.nextInt();
+                                if (choise == 1) {
+                                    player.addMoney(-chips_costs[2]);
+                                    cost += chips_costs[2] * 0.75;
+                                    chips_count++;
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Введите число 1 или 2");
                             }
-                        } catch (Exception e) {
-                            System.out.println("Введите число 1 или 2");
                         }
                     }
-                }
-                if (chips_count == 3) {
-                    if (player.getMoney() >= chips_costs[3]) {
-                        try {
-                            System.out.println("Желаете поставить фишку?");
-                            System.out.println("1. Да");
-                            System.out.println("2. Нет");
-                            choise = scanner.nextInt();
-                            if (choise == 1) {
-                                player.addMoney(-chips_costs[3]);
-                                cost += chips_costs[3] * 0.75;
-                                chips_count++;
+                    if (chips_count == 3) {
+                        if (player.getMoney() >= chips_costs[3]) {
+                            try {
+                                System.out.println("Желаете поставить фишку?");
+                                System.out.println("1. Да");
+                                System.out.println("2. Нет");
+                                choise = scanner.nextInt();
+                                if (choise == 1) {
+                                    player.addMoney(-chips_costs[3]);
+                                    cost += chips_costs[3] * 0.75;
+                                    chips_count++;
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Введите число 1 или 2");
                             }
-                        } catch (Exception e) {
-                            System.out.println("Введите число 1 или 2");
                         }
                     }
-                }
-                if (chips_count == 4) {
-                    if (player.getMoney() >= chips_costs[4]) {
-                        try {
-                            System.out.println("Желаете поставить фишку?");
-                            System.out.println("1. Да");
-                            System.out.println("2. Нет");
-                            choise = scanner.nextInt();
-                            if (choise == 1) {
-                                player.addMoney(-chips_costs[4]);
-                                cost += chips_costs[4] * 0.75;
-                                chips_count++;
+                    if (chips_count == 4) {
+                        if (player.getMoney() >= chips_costs[4]) {
+                            try {
+                                System.out.println("Желаете поставить фишку?");
+                                System.out.println("1. Да");
+                                System.out.println("2. Нет");
+                                choise = scanner.nextInt();
+                                if (choise == 1) {
+                                    player.addMoney(-chips_costs[4]);
+                                    cost += chips_costs[4] * 0.75;
+                                    chips_count++;
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Введите число 1 или 2");
                             }
-                        } catch (Exception e) {
-                            System.out.println("Введите число 1 или 2");
                         }
                     }
                 }
             }
         }
     }
-    private boolean paymentCheck(Player player){
+
+    private boolean paymentCheck(Player player) {
         if (player.getMoney() >= this.cost) {
             player.addMoney(-cost);
             System.out.println("Вы встали на недвижимости игрока " + Game.whoBought(this).getName() + ". Вам придется заплатить " + cost + "╒");
             Game.whoBought(this).addMoney(cost);
             return true;
-        } else if(player.getBought().size() != 0 && player.getMoney() < this.cost ) {
+        } else if (player.getBought().size() != 0 && player.getMoney() < this.cost) {
             player.letsGoSell();
             return false;
-        } else if(player.getBought().size() == 0 && player.getMoney() < this.cost){
+        } else if (player.getBought().size() == 0 && player.getMoney() < this.cost) {
             return true;
         }
         return true;
@@ -156,6 +159,14 @@ public class StockCard extends Card {
 
     public Tags getTag() {
         return tag;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCost() {
+        return cost;
     }
 
     public String getTagString() {
